@@ -93,6 +93,13 @@ function displayMeal(){
         <h1 class="foodRecommend">${desserts[getRandomIndex(desserts)]}!</h1>
         `
     }
+    if (entireMealRadioButton.checked === true){
+        square2.innerHTML = ""
+        square2.innerHTML += `
+        <h2 class="italicize entireMealHeader">You should make:</h2>
+        <h1 class="entireMeal">${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!</h1>
+        `
+    }
 }
 
 function getRandomIndex(array) {
