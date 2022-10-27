@@ -69,26 +69,27 @@ letsCookButton.addEventListener('click',displayMeal)
 
 
 
+
 //functions
 
 function displayMeal(){
     if (sideRadioButton.checked === true){
         square2.innerHTML = ""
         square2.innerHTML += `
-        <h2>You should make:</h2>
+        <h2 class="italicize">You should make:</h2>
         <h1 class="foodRecommend">${sides[getRandomIndex(sides)]}!</h1>
         `
     }
     if (mainDishRadioButton.checked === true){
         square2.innerHTML = ""
         square2.innerHTML += `
-        <h2>You should make:</h2>
+        <h2 class="italicize">You should make:</h2>
         <h1 class="foodRecommend">${mains[getRandomIndex(mains)]}!</h1>
         `
     }if (dessertRadioButton.checked === true){
         square2.innerHTML = ""
         square2.innerHTML += `
-        <h2>You should make:</h2>
+        <h2 class="italicize">You should make:</h2>
         <h1 class="foodRecommend">${desserts[getRandomIndex(desserts)]}!</h1>
         `
     }
@@ -97,3 +98,4 @@ function displayMeal(){
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 }
+
