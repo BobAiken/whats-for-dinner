@@ -1,3 +1,5 @@
+//food arrays
+
 var sides = [
     "Miso Glazed Carrots",
     "Coleslaw",
@@ -47,3 +49,51 @@ var desserts = [
     "Croissants",
     "Eclairs"
 ]
+
+//querySelectors
+
+var sideRadioButton = document.querySelector("#side")
+var mainDishRadioButton = document.querySelector("#main_dish")
+var dessertRadioButton = document.querySelector("#dessert")
+var entireMealRadioButton = document.querySelector("#entire_meal")
+
+
+var letsCookButton = document.querySelector("#letsCook")
+
+var square2 = document.querySelector("#square2")
+var cookPot = document.querySelector("#cookPot")
+
+//eventListeners
+
+letsCookButton.addEventListener('click',displayMeal)
+
+
+
+//functions
+
+function displayMeal(){
+    if (sideRadioButton.checked === true){
+        square2.innerHTML = ""
+        square2.innerHTML += `
+        <h2>You should make:</h2>
+        <h1 class="foodRecommend">${sides[getRandomIndex(sides)]}!</h1>
+        `
+    }
+    if (mainDishRadioButton.checked === true){
+        square2.innerHTML = ""
+        square2.innerHTML += `
+        <h2>You should make:</h2>
+        <h1 class="foodRecommend">${mains[getRandomIndex(mains)]}!</h1>
+        `
+    }if (dessertRadioButton.checked === true){
+        square2.innerHTML = ""
+        square2.innerHTML += `
+        <h2>You should make:</h2>
+        <h1 class="foodRecommend">${desserts[getRandomIndex(desserts)]}!</h1>
+        `
+    }
+}
+
+function getRandomIndex(array) {
+    return Math.floor(Math.random() * array.length);
+}
