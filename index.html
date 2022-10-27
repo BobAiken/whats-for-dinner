@@ -4,7 +4,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   </head>
   <body>
-    
+    <div class="header">
+      <h1>What's for Dinner?</h1>
+      <button id="Add_a_recipe">ADD A RECIPE</button>
+    </div>
+    <section class="wrapper">
+      <div class="square">
+        <h2>What are you looking for?
+          <span>*</span>
+        </h2>
+        <div class="radioStar">
+          <input type="radio" id="side" name="meal" value="side">
+          <label for="side">Side</label>
+        </div>
+        <div class="radioStar">
+          <input type="radio" id="main_dish" name="meal" value="main_dish">
+          <label for="main_dish">Main Dish</label>
+        </div>
+        <div class="radioStar">
+          <input type="radio" id="dessert" name="meal" value="dessert">
+          <label for="dessert">Dessert</label>
+        </div>
+        <div class="radioStar">
+          <input type="radio" id="entire_meal" name="meal" value="entire_meal">
+          <label for="entire_meal">Entire Meal</label>
+        </div>
+        <button id="letsCook">LET'S COOK</button>
+      </div>
+      <div class="square">
+          <img src="./assets/cookpot.svg" alt="cookpot">
+      </div>
+    </section>
   </body>
   <script type="text/javascript" src="main.js"></script>
 </html>
