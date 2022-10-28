@@ -86,6 +86,7 @@ body {
     align-items: center;
     align-content: center;
     text-align: center;
+    position: relative;
 }
 
 .square:nth-child(2) > img{
@@ -99,6 +100,19 @@ body {
 .square:nth-child(2) > h1{
     margin:0px;
 }
+
+.square:nth-child(2) > button{
+    background-color: grey;
+    border-style: none;
+    color: white;
+    border-radius: 4px;
+    font-size: large;
+    padding: 10px;
+    position:absolute;
+    right: 25px;
+    bottom:25px;
+}
+
 
 h2 > sup {
     color:red;

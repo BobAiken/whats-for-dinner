@@ -56,9 +56,8 @@ var sideRadioButton = document.querySelector("#side")
 var mainDishRadioButton = document.querySelector("#main_dish")
 var dessertRadioButton = document.querySelector("#dessert")
 var entireMealRadioButton = document.querySelector("#entire_meal")
-
-
 var letsCookButton = document.querySelector("#letsCook")
+
 
 var square2 = document.querySelector("#square2")
 var cookPot = document.querySelector("#cookPot")
@@ -66,6 +65,7 @@ var cookPot = document.querySelector("#cookPot")
 //eventListeners
 
 letsCookButton.addEventListener('click',displayMeal)
+
 
 
 
@@ -78,27 +78,40 @@ function displayMeal(){
         square2.innerHTML += `
         <h2 class="italicize">You should make:</h2>
         <h1 class="foodRecommend">${sides[getRandomIndex(sides)]}!</h1>
+        <button id="clear">CLEAR</button>
         `
+        var clearButton = document.querySelector("#clear")
+        clearButton.addEventListener('click',clearMeal)
     }
     if (mainDishRadioButton.checked === true){
         square2.innerHTML = ""
         square2.innerHTML += `
         <h2 class="italicize">You should make:</h2>
         <h1 class="foodRecommend">${mains[getRandomIndex(mains)]}!</h1>
+        <button id="clear">CLEAR</button>
         `
-    }if (dessertRadioButton.checked === true){
+        var clearButton = document.querySelector("#clear")
+        clearButton.addEventListener('click',clearMeal)
+    }
+    if (dessertRadioButton.checked === true){
         square2.innerHTML = ""
         square2.innerHTML += `
         <h2 class="italicize">You should make:</h2>
         <h1 class="foodRecommend">${desserts[getRandomIndex(desserts)]}!</h1>
+        <button id="clear">CLEAR</button>
         `
+        var clearButton = document.querySelector("#clear")
+        clearButton.addEventListener('click',clearMeal)
     }
     if (entireMealRadioButton.checked === true){
         square2.innerHTML = ""
         square2.innerHTML += `
         <h2 class="italicize entireMealHeader">You should make:</h2>
         <h1 class="entireMeal">${mains[getRandomIndex(mains)]} with a side of ${sides[getRandomIndex(sides)]} and ${desserts[getRandomIndex(desserts)]} for dessert!</h1>
+        <button id="clear">CLEAR</button>
         `
+        var clearButton = document.querySelector("#clear")
+        clearButton.addEventListener('click',clearMeal)
     }
 }
 
@@ -106,3 +119,9 @@ function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 }
 
+function clearMeal(){
+    square2.innerHTML = ""
+    square2.innerHTML += `
+        <img id="cookPot" src="./assets/cookpot.svg" alt="cookpot">
+        `
+}
