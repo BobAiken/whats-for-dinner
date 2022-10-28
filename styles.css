@@ -119,7 +119,7 @@ h2 > sup {
 }
 
 .hidden{
-    display:none
+    visibility: hidden;
 }
 
 .foodRecommend {

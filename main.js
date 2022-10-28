@@ -57,7 +57,7 @@ var mainDishRadioButton = document.querySelector("#main_dish")
 var dessertRadioButton = document.querySelector("#dessert")
 var entireMealRadioButton = document.querySelector("#entire_meal")
 var letsCookButton = document.querySelector("#letsCook")
-
+var radioButtons = document.querySelectorAll(".radioStar")
 
 var square2 = document.querySelector("#square2")
 var cookPot = document.querySelector("#cookPot")
@@ -66,9 +66,9 @@ var cookPot = document.querySelector("#cookPot")
 
 letsCookButton.addEventListener('click',displayMeal)
 
-
-
-
+for(var i = 0;i<radioButtons.length;i++){
+    radioButtons[i].addEventListener('click',showLetsCookButton)
+}
 
 //functions
 
@@ -124,4 +124,8 @@ function clearMeal(){
     square2.innerHTML += `
         <img id="cookPot" src="./assets/cookpot.svg" alt="cookpot">
         `
+}
+
+function showLetsCookButton(){
+    letsCookButton.classList.remove("hidden")
 }
