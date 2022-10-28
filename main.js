@@ -58,17 +58,25 @@ var dessertRadioButton = document.querySelector("#dessert")
 var entireMealRadioButton = document.querySelector("#entire_meal")
 var letsCookButton = document.querySelector("#letsCook")
 var radioButtons = document.querySelectorAll(".radioStar")
+var addARecipe = document.querySelector("#Add_a_recipe")
+var recipeForm = document.querySelector("#form")
+var addNewButton = document.querySelector("#addNew")
 
 var square2 = document.querySelector("#square2")
 var cookPot = document.querySelector("#cookPot")
 
+var recipeTypeInput = document.querySelector("#recipeTypeInput")
+var recipeNameInput = document.querySelector("#recipeNameInput")
 //eventListeners
 
 letsCookButton.addEventListener('click',displayMeal)
+addARecipe.addEventListener('click',displayForm)
+addNewButton.addEventListener('click',addNewRecipe)
 
 for(var i = 0;i<radioButtons.length;i++){
     radioButtons[i].addEventListener('click',showLetsCookButton)
 }
+
 
 //functions
 
@@ -128,4 +136,54 @@ function clearMeal(){
 
 function showLetsCookButton(){
     letsCookButton.classList.remove("hidden")
+}
+
+function displayForm(){
+    recipeForm.classList.toggle("hidden")
+}
+
+function addNewRecipe(){
+    if (recipeTypeInput.value.toUpperCase() == "side".toUpperCase()){
+        sides.push(recipeNameInput.value)
+        square2.innerHTML = ""
+        square2.innerHTML += `
+        <h2 class="italicize">You should make:</h2>
+        <h1 class="foodRecommend">${recipeNameInput.value}!</h1>
+        <button id="clear">CLEAR</button>
+        `
+        var clearButton = document.querySelector("#clear")
+        clearButton.addEventListener('click',clearMeal)
+    } else if (recipeTypeInput.value.toUpperCase() == "main dish".toUpperCase()){
+        mains.push(recipeNameInput.value)
+        square2.innerHTML = ""
+        square2.innerHTML += `
+        <h2 class="italicize">You should make:</h2>
+        <h1 class="foodRecommend">${recipeNameInput.value}!</h1>
+        <button id="clear">CLEAR</button>
+        `
+        var clearButton = document.querySelector("#clear")
+        clearButton.addEventListener('click',clearMeal)
+    } else if (recipeTypeInput.value.toUpperCase() == "dessert".toUpperCase()){
+        desserts.push(recipeNameInput.value)
+        square2.innerHTML = ""
+        square2.innerHTML += `
+        <h2 class="italicize">You should make:</h2>
+        <h1 class="foodRecommend">${recipeNameInput.value}!</h1>
+        <button id="clear">CLEAR</button>
+        `
+        var clearButton = document.querySelector("#clear")
+        clearButton.addEventListener('click',clearMeal)
+    } else {
+        square2.innerHTML = ""
+        square2.innerHTML += `
+        <h2 class="italicize">ERROR</h2>
+        <h1 class="foodRecommend">Please input a valid recipe type!</h1>
+        <button id="clear">CLEAR</button>
+        `
+        var clearButton = document.querySelector("#clear")
+        clearButton.addEventListener('click',clearMeal)
+    }
+    recipeTypeInput.value = ""
+    recipeNameInput.value = ""
+
 }

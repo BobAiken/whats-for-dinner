@@ -118,8 +118,34 @@ h2 > sup {
     color:red;
 }
 
+.formWrapper{
+    background-color:rgba(225, 225, 225, .9);
+    display: flex;
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    font-size: 20px;
+    padding: 30px;
+    align-items:center;
+    gap: 15px;
+}
+
+.formWrapper > input{
+    height: 40px;
+    width: 175px
+}
+
+.formWrapper > button{
+    background-color: #12b9b2;
+    border: none;
+    font-size: large;
+    border-radius: 6px;
+    height: 40px;
+    width: 100px;
+}
+
 .hidden{
-    visibility: hidden;
+    visibility:hidden;
 }
 
 .foodRecommend {
