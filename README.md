@@ -1,51 +1,33 @@
-# What's for Dinner?
 
-## Overview
+# What's for Dinner? 
 
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
+### Abstract:
+Whats-for-dinner is a web app that helps users decide what to eat for dinner. The user can select a recipe type and get a randomly selected meal of that type, or an entire full course meal. The user can add new recipies using a form. 
 
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
+### Installation Instructions:
+1. Fork the repository
+1. Clone down into your machine
+2. Open the directory
+3. Run open index.html
+### Preview of App:
+![ezgif-4-d3e681f21c](https://user-images.githubusercontent.com/113254999/198840644-68526973-f75e-4252-b1e7-73a0f98de6b2.gif)
 
-The spec for this project can be found [here](https://frontend.turing.io/projects/module-1/dinner.html). 
+### Context:
+This project was given to us on week three of mod1. It was worked on for 4 days. 
 
-## Learning Goals
+### Contributors:
+[Just me](https://github.com/BobAiken)
 
+### Learning Goals:
 - Gain experience building an application that utilizes HTML, CSS and JavaScript
 - Write HTML and CSS to match a provided comp
 - Understand how to listen to and respond to user events
 - Individualize your programming skill set
 
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
-
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
-
-# What's for Dinner? 
-
-### Abstract:
-[//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
-
-### Installation Instructions:
-[//]: <> (What steps does a person have to take to get your app cloned down and running?)
-
-### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
-
-### Context:
-[//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
-
-### Contributors:
-[//]: <> (Who worked on this application? Link to their GitHubs.)
-
-### Learning Goals:
-[//]: <> (What were the learning goals of this project? What tech did you work with?)
-
 ### Wins + Challenges:
 [//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+- Completed multiple CYOA's
+- Creating a form from scratch
+- Gained further understanding of CSS and HTML and how javascript interacts with them.
+
+A challenge I faced was how to get certain elements to become closer to one another when flex properties seemingly did not work. I solved this probelm by going into the dev console and inspecting each element that needed to be adjusted and realizing that each elements margins/padding influenced the spacing between elements even when flex properties were used. 
